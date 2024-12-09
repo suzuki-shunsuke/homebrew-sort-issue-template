@@ -1,0 +1,1 @@
+# homebrew-sort-issue-template
