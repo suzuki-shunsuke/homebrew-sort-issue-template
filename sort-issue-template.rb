@@ -6,21 +6,21 @@ class SortIssueTemplate < Formula
   desc "Change the order of GitHub Issue Templates using a text editor
 "
   homepage "https://github.com/suzuki-shunsuke/sort-issue-template"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.1/sort-issue-template_darwin_amd64.tar.gz"
-      sha256 "ed07456faa31e927b069923678af3453d69b4c551dc84ce3c4e0bd0ac7b41e05"
+      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.2/sort-issue-template_darwin_amd64.tar.gz"
+      sha256 "729454616f981ef504629d7ffc17be0c4a25dc365e0f992ba237f5793c8da4c9"
 
       def install
         bin.install "sort-issue-template"
       end
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.1/sort-issue-template_darwin_arm64.tar.gz"
-      sha256 "eb803987aede00dcbbba0b03fb469762578dc752d49c151f036492b76c2f90f1"
+      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.2/sort-issue-template_darwin_arm64.tar.gz"
+      sha256 "32f9556903dd5819d7d1c232c87eac595cf6569e4ed55d219bc316aab531309f"
 
       def install
         bin.install "sort-issue-template"
@@ -31,8 +31,8 @@ class SortIssueTemplate < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.1/sort-issue-template_linux_amd64.tar.gz"
-        sha256 "969dba676436620a6a7a8fa5d1d2e8c3e57bcdcfd04add2d583b3f7c414e2480"
+        url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.2/sort-issue-template_linux_amd64.tar.gz"
+        sha256 "50efe40cade205afd60b18aa8c771b83fd5049c4b5600521aed2bf783aa9ffc0"
 
         def install
           bin.install "sort-issue-template"
@@ -41,8 +41,8 @@ class SortIssueTemplate < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.1/sort-issue-template_linux_arm64.tar.gz"
-        sha256 "be5a431ef5c3dce9c2898d9f3b1181ce038c93c89dfb335fd7a63718452a85e3"
+        url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.2/sort-issue-template_linux_arm64.tar.gz"
+        sha256 "9b2fccf6d5ee6de8a517186b0a733487ac3f1562f9cda7ffbd058afe550ae52b"
 
         def install
           bin.install "sort-issue-template"
