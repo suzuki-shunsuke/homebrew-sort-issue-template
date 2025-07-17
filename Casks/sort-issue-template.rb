@@ -3,7 +3,7 @@ cask "sort-issue-template" do
   desc "Change the order of GitHub Issue Templates using a text editor
 "
   homepage "https://github.com/suzuki-shunsuke/sort-issue-template"
-  version "0.1.3"
+  version "0.1.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,29 @@ cask "sort-issue-template" do
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.3/sort-issue-template_darwin_amd64.tar.gz"
-      sha256 "74e536e550fb87e5d4854b80f5b9a94448f60e4071adbb84b2e24de75a31e4e4"
+      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.4/sort-issue-template_darwin_amd64.tar.gz"
+      sha256 "83abe1233433276bae8703c9cf8612fe78d275e06b852ed088b40ad4490aa799"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.3/sort-issue-template_darwin_arm64.tar.gz"
-      sha256 "cc4b5f827132115350e087e83e0d82862e9b1843d32cbbfb699644fd7d93d43d"
+      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.4/sort-issue-template_darwin_arm64.tar.gz"
+      sha256 "190d6dfb7ef7e4f0f15baaf5c44457ad40e19ef56f3c60f85762401bc10d6e63"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.3/sort-issue-template_linux_amd64.tar.gz"
-      sha256 "b01a7de2419dd3a195974d62908453b3b5b0e2300e7c99c1ff97232093644231"
+      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.4/sort-issue-template_linux_amd64.tar.gz"
+      sha256 "cd23b40a28e1be9461cb78021329255dc106415a4c360800b67be6beeb4b268b"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.3/sort-issue-template_linux_arm64.tar.gz"
-      sha256 "d5a9b41365afa8a3191a4549749040512c6abd7c9043b6decb0e1b6242fe56b7"
+      url "https://github.com/suzuki-shunsuke/sort-issue-template/releases/download/v0.1.4/sort-issue-template_linux_arm64.tar.gz"
+      sha256 "30b6589903b1ff9bad9866376530f817071f7c5fd705a679536a881f1a5ac386"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sort-issue-template"]
     end
   end
 
